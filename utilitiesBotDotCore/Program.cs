@@ -40,12 +40,7 @@ namespace utilitiesBotDotCore
         static void Main(string[] args)
         {
             ConfigBuilder();
-
-            var log = _provider.GetService<ILogger<Program>>();
-            for (int i = 0; i < 1000; i++)
-                log.LogInformation("ERROR--------------------------------------Error");
-
-            //_provider.GetService<Services.IService>().Run();
+           _provider.GetService<Services.IService>().Run();
         }
 
     }
